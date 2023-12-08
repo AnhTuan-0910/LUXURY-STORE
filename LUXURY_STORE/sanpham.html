@@ -1,0 +1,31 @@
+<div class=" container" style="padding-top:30px ;padding-bottom: 30px;">
+    <div class="row">
+        <div class="col-md-3 " style="border-radius:2px solid white ; background-color: aqua;" >
+
+            <ul>
+                <li><a  href="#sanpham"> Tất cả sản phẩm</a></li>
+                <li><a  href="#sanphammoi">Hàng mới</a> </li>
+                <li><a href="#spbanchay"> Hàng bán chạy</a></li>
+                <li><a href="#spao">Áo</a></li>
+                <li><a href="#spquan">Quần</a></li>
+            </ul>
+        
+        </div>
+        <div class="col-md-9 " >
+            <table class="table  "  >
+                
+                <tr class="row container"style="background-color:white ;"  >
+                    <td class="col-md-3" ng-repeat="sanpham in listSanPhamAll">        
+                       <img src={{sanpham.src}} width="200px" height="200px">
+                       <br>
+                       <a href="#detail/{{sanpham.id}}" style="text-decoration:none ;">{{sanpham.ten}}</a>
+                       <br>
+                       {{sanpham.gia}}
+                    </td>
+                   
+                   </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,82 @@
+<div class="row">
+    <div style="background-color:ghostwhite ;" class="col-md-6 row">
+      <div class="col-md-12" style="margin-left:200px ; margin-top:70px; padding-bottom:30px;">
+         <img style="width:300px ; height: 300px;"  ng-src="{{src}}" alt=""></div>
+
+    </div>
+
+    <div class="col-md-6">
+      <table class="table container">
+        
+        
+        <tr>
+          <td style="border:none ;">
+            <h2 ng-bind="ten"></h2>
+          </td>
+
+        </tr>
+        <tr>
+            <td style="border:none ;">
+             <b>Mã SẢN PHẨM:<b ng-bind="id"></b></b> 
+            </td>
+  
+          </tr>
+        <tr>
+          <td style="border:none ;">
+            <b>Giá</b>
+          </td>
+
+        </tr>
+        <tr>
+          <td style="border:none ;">
+            <b ng-bind="gia"></b>
+          </td>
+
+        </tr>
+        
+        <tr>
+          <td style="border:none ;">
+            <b>Kích thước</b>
+          </td>
+
+        </tr>
+        <tr>
+          <td style="border:none ;">
+            <nav>
+              <button type="button" class="btn btn-outline-warning">S</button>
+              <button type="button" class="btn btn-outline-secondary">M</button>
+              <button type="button" class="btn btn-outline-warning">L</button>
+              <button type="button" class="btn btn-outline-secondary">XL</button>
+            </nav>
+          </td>
+
+        </tr>
+       <tr>
+        <td style="border:none ;">
+          <b>Số lượng</b>
+        </td>
+        <tr>
+          <td style="border:none ;">
+            
+              <div style="border:1px solid gray ;float: left;"><a class="btn" ng-click="giam()">-</a></div>
+            <div style="border:1px solid gray ;float: left;"><a class="btn" >{{count}}</a></div>
+            <div style="border:1px solid gray ;float: left;"><a  class="btn"  ng-click="tang()">+</a></div>
+          
+            
+          </td>
+        </tr>
+       </tr>
+        <tr>
+          <td style="border:none ;">
+         
+           
+              <div  style="margin-left: 20px;float: left;"><button class=" btn"
+                style="height: 40px; background-color: red ;color:white "> Thêm vào giỏ</button></div>
+                <div style="margin-left: 100px;float: left;"><button class="btn "
+                    style="height: 40px; background-color: blue; color: white;">Mua hàng ngay</button></div>
+            </td>
+
+        </tr>
+      </table>
+    </div>
+    

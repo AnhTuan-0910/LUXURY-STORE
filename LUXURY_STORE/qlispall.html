@@ -1,0 +1,48 @@
+
+<div class="container" style="padding-top: 30px;padding-bottom: 30px;">
+    <h1 style="text-align:center ;"> QUẢN LÍ SẢN PHẨM</h1>
+    <form class="container">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">ID</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="id">
+         
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Hình ảnh(src)</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="src">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Tên</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="ten">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Giá</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="gia">
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="addSPAll()">Them</button>
+       <button type="submit" class="btn btn-primary" ng-click="putAll()">Update</button>
+       
+      </form>
+    <table class="table"> 
+     <thead>
+        <tr>
+            <td>ID SẢN PHẨM</td>
+            <td>HÌNH ẢNH</td>
+            <td>TÊN</td>
+            <td>GIÁ</td>
+        </tr>
+     </thead>
+     <tbody>
+        <tr ng-repeat="sanpham in listSanPhamAll">
+            <td>{{sanpham.id}}</td>
+            <td><img src="{{sanpham.src}}" width="50px" height="50px"></td>
+            <td>{{sanpham.ten}}</td>
+            <td>{{sanpham.gia}}</td>
+           
+           <td><button type="submit" class="btn btn-primary" ng-click="detailAll(sanpham.id)">Detail</button></td>
+           <td><button type="submit" class="btn btn-primary" ng-click="deleteAll(sanpham.id)">Delete</button></td>
+        </tr>
+
+     </tbody>
+    </table>
+</div>
